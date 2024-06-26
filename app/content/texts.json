@@ -1,0 +1,38 @@
+{
+  "irga": {
+    "toolbar": {
+      "about_us": "o nas",
+      "contact": "kontakt",
+      "offer": "oferta",
+      "rep": "repertuar",
+      "instagram": "instagram",
+      "facebook": "facebook"
+    },
+    "main_page": {
+      "about_us_header": "kim jest irga?",
+      "about_us_content": "irga to żywiołowa komedia improwizowana oparta o sugestie publiczności. Zagraliśmy już ponad 150 spektakli – może wpadniesz na kolejny?",
+      "about_us_button":"poznaj-irgę"
+    },
+    "about_us": {},
+    "offer": {
+      "gigs_header" : "występy",
+      "gigs_content": "Tworzymy spektakle komediowe tu i teraz. Zajrzyj na naszego facebooka!",
+      "events_header": "firmówki",
+      "events_content": "Prowadzimy także profesjonalne szkolenia dla firm, instytucji i organizacji.",
+      "workshops_header": "warsztaty",
+      "workshops_content": "Kierujemy je do osób dorosłych, młodzieży i dzieci."
+    },
+    "footer": {
+      "website": "website by kata atak",
+      "photos": "photos by daniel-jakś",
+      "rights": "@2024 irga",
+      "header": "sociale i kontakt",
+      "contact": {
+        "mail": "irga.impro@gmail.com",
+        "person_header": "eventy, sprktakle, zamóweinia szkoleń i warsztatów",
+        "person_one": "Krzysztof +48 604 237 724",
+        "person_two": "Piotr +48 512 604 759"
+      }
+    }
+}
+}

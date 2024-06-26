@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import irga from "@/app/content/irga.png";
 import { Texts } from "@/app/content/texts";
+import texts from "../../texts.json";
 import Link from "next/link";
 
 export const SectionFaces = () => {
@@ -18,20 +19,20 @@ export const SectionFaces = () => {
           "flex flex-col text-irga-light font-custom px-2 py-2 m-6 w-full text-center items-center"
         }
       >
-        <span className={"text-irga-light text-xl font-light"}>
-          kim jest irga?
+        <span className={"text-irga-light text-2xl font-urbanist"}>
+          {texts.irga.main_page.about_us_header}
         </span>
-        <span className={"text-irga-light text-6xl p-6"}>
-          {Texts.IRGA_MAIN_ABOUT}
+        <span className={"text-irga-light font-libre text-6xl p-6"}>
+          {texts.irga.main_page.about_us_content}
         </span>
         <Link
           id={"button-about-us"}
           href="/oferta"
           className={
-            "bg-irga-sand w-1/4 text-irga-dark font-custom px-2 py-2 text-xl"
+            "bg-irga-sand w-1/4 text-irga-dark font-questrial px-2 py-2 text-2xl"
           }
         >
-          {"poznaj-irgę"}
+          {texts.irga.main_page.about_us_button}
         </Link>
       </div>
     </section>

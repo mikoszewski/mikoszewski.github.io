@@ -1,6 +1,6 @@
 import React from "react";
 import { OfferCard } from "@/app/content/components/Sections/OfferCard";
-import { green } from "next/dist/lib/picocolors";
+import texts from "../../texts.json";
 
 export const SectionOffer = () => {
   return (
@@ -8,20 +8,20 @@ export const SectionOffer = () => {
       <div className={"flex flex-row mx-40 my-52 justify-between items-center"}>
         <OfferCard
           number={1}
-          header={"warstztay"}
-          content={"wypłaty"}
+          header={texts.irga.offer.gigs_header}
+          content={texts.irga.offer.gigs_content}
           color={"green"}
         />
         <OfferCard
           number={1}
-          header={"warstztay"}
-          content={"wypłaty"}
+          header={texts.irga.offer.events_header}
+          content={texts.irga.offer.events_content}
           color={"orange"}
         />
         <OfferCard
           number={1}
-          header={"warstztay"}
-          content={"wypłaty"}
+          header={texts.irga.offer.workshops_header}
+          content={texts.irga.offer.workshops_content}
           color={"purple"}
         />
       </div>

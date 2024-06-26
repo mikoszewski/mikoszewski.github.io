@@ -1,6 +1,21 @@
 @font-face {
-  font-family: "irgaFont";
+  font-family: "SpaceGrotesk";
   src: url('./content/fonts/SpaceGrotesk-VariableFont_wght.ttf');
+  font-size: 16px;
+}
+@font-face {
+  font-family: "LibreBaskerville";
+  src: url('./content/fonts/LibreBaskerville-Regular.ttf');
+  font-size: 16px;
+}
+@font-face {
+  font-family: "Questrial";
+  src: url('./content/fonts/Questrial-Regular.ttf');
+  font-size: 16px;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url('./content/fonts/Urbanist-VariableFont_wght.ttf');
   font-size: 16px;
 }
 
@@ -22,7 +37,7 @@
 }
 
 body {
-  /*color: rgb(var(--background-main));*/
+  color: rgb(var(--background-main));
   background: rgb(var(--background-main));
 }
 

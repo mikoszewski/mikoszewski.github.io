@@ -19,11 +19,15 @@ export const OfferCard: React.FC<{
 
   return (
     <section
-      className={`flex flex-col p-6 ${classColor(color)} w-[315px] h-[445px]`}
+      className={`flex flex-col justify-between p-6 ${classColor(color)} w-[315px] h-[445px]`}
     >
-      <span>{number}</span>
-      <span>{header}</span>
-      <span>{content}</span>
+      <span className="text-irga-dark font-custom text-3xl">{number}</span>
+      <div className="flex flex-col">
+        <span className="text-irga-dark font-libre text-5xl mb-6">
+          {header}
+        </span>
+        <span className="text-irga-dark font-custom text-base">{content}</span>
+      </div>
     </section>
   );
 };
