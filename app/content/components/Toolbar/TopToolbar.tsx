@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import logo from "../../logo.svg";
 import Link from "next/link";
+import texts from "../../texts.json";
 
 export const TopToolbar = () => {
   const scrollToSection = (id: string) => {
@@ -18,22 +19,22 @@ export const TopToolbar = () => {
             className="button-toolbar"
             onClick={() => scrollToSection("offer")}
           >
-            oferta
+            {texts.irga.toolbar.offer}
           </button>
           <Link href={"/o_nas"} className="button-toolbar">
-            o nas
+            {texts.irga.toolbar.about_us}
           </Link>
           <button
             className="button-toolbar"
             onClick={() => scrollToSection("footer")}
           >
-            kontakt
+            {texts.irga.toolbar.contact}
           </button>
           <button
             className="button-toolbar"
             onClick={() => scrollToSection("events")}
           >
-            repertuar
+            {texts.irga.toolbar.rep}
           </button>
         </div>
         <div className="flex gap-4">
@@ -42,22 +43,22 @@ export const TopToolbar = () => {
             className="button-toolbar"
             target={"_blank"}
           >
-            instagram
+            {texts.irga.toolbar.instagram}
           </Link>
           <Link
             href={"https://www.facebook.com/irga.impro"}
             target={"_blank"}
             className="button-toolbar"
           >
-            facebook
+            {texts.irga.toolbar.facebook}
           </Link>
         </div>
-      </div>
-      <div className="justify-end">
+            <div className="justify-end">
         <Link href="/">
           <Image src={logo} alt={"logo"} />
         </Link>
       </div>
-    </div>
+      </div>
+</div>
   );
 };
