@@ -53,6 +53,11 @@ export const TopToolbar = () => {
             {texts.irga.toolbar.facebook}
           </Link>
         </div>
+            <div className="justify-end">
+        <Link href="/">
+          <Image src={logo} alt={"logo"} />
+        </Link>
+      </div>
       </div>
 </div>
   );
