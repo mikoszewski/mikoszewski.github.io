@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const SectionFaces = () => {
   return (
-    <section className={"h-[1100px] bg-irga-black flex flex-col"}>
+    <section className={"h-[1100px] bg-irga-black flex flex-col"} id={"morda"}>
       <Image
         id="o-nas"
         src={irga}

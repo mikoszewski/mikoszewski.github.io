@@ -13,13 +13,13 @@ export const SectionOffer = () => {
           color={"green"}
         />
         <OfferCard
-          number={1}
+          number={2}
           header={texts.irga.offer.events_header}
           content={texts.irga.offer.events_content}
           color={"orange"}
         />
         <OfferCard
-          number={1}
+          number={3}
           header={texts.irga.offer.workshops_header}
           content={texts.irga.offer.workshops_content}
           color={"purple"}
