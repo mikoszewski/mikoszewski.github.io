@@ -7,7 +7,7 @@ import texts from "../../texts.json";
 
 export const ContactSection = () => {
   return (
-    <div id={"footer"} className={"h-[575px] p-6 h-auto max-h-[575px]"}>
+    <section id={"footer"} className={"h-[575px] p-6 h-auto max-h-[575px]"}>
       <div className={"mb-12"}>
         <span className={"w-full text-irga-dark text-5xl font-libre"}>
           sociale i kontakt
@@ -40,6 +40,6 @@ export const ContactSection = () => {
         </section>
       </div>
       <Footer />
-    </div>
+    </section>
   );
 };

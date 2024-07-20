@@ -7,7 +7,7 @@ import { SectionFaces } from "@/app/content/components/Sections/SectionFaces";
 
 export const IrgiMorda = () => {
   return (
-    <div className="w-full h-full flex flex-col">
+    <section className="w-full h-full flex flex-col" id={"main"}>
       <div className={"h-[700px] flex flex-row justify-between items-center"}>
         <div className={"flex flex-col p-6"}>
           <span className={"text-irga-dark font-custom px-2 py-2 text-3xl"}>
@@ -27,7 +27,6 @@ export const IrgiMorda = () => {
           className={"w-[900px] h-[900px] mr-8"}
         />
       </div>
-      <SectionFaces />
-    </div>
+    </section>
   );
 };
