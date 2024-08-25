@@ -3,8 +3,8 @@ import { EventsContainer } from "@/app/content/components/Sections/EventsContain
 
 export const SectionEvents = () => {
   return (
-    <section id={"events"} className={"h-[650px] flex flex-col"}>
-      <span className={"text-irga-dark text-xl font-libre pt-24 pl-16"}>
+    <section className={" flex flex-col py-24"} id={"events"}>
+      <span className={"text-irga-dark text-xl font-libre pl-16"}>
         najbliższe spektakle
       </span>
       <div className={"mx-36 mt-20"}>
