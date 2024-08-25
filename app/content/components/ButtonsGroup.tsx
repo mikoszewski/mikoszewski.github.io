@@ -17,12 +17,13 @@ export const ButtonsGroup: React.FC<{
       >
         {buttonOneName}
       </Link>
-      <button
+      <Link
+        href="/repertuar"
         id={"button-two"}
         className={"text-irga-dark font-custom px-2 py-2 text-3xl"}
       >
         {buttonTwoName}
-      </button>
+      </Link>
     </div>
   );
 };

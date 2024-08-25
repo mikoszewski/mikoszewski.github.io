@@ -39,63 +39,46 @@ export const TopToolbar = () => {
     };
   }, []);
 
-  const isSecondaryText = () => {
-    return activeSection === "morda" || activeSection === "offer";
+  const getActiveClass = (activeSection: string | null) => {
+    return activeSection === "about_us" ||
+      activeSection === "offer" ||
+      activeSection === "rep" ||
+      activeSection === "social_mediaa"
+      ? "button-toolbar-white"
+      : "button-toolbar-black";
   };
 
   return (
-    <div className="bg-transparent p-4 flex justify-between items-center sticky top-0 h-[80px]">
+    <div className="bg-transparent p-4 flex justify-between items-center sticky top-0 h-[80px] z-10">
       <div className="flex justify-between space-x-4 p-2 w-1/2">
         <div className=" flex gap-4">
           <button
-            className={
-              isSecondaryText()
-                ? "button-toolbar-white"
-                : "button-toolbar-black"
-            }
+            className={getActiveClass(activeSection)}
             onClick={() => scrollToSection("offer")}
           >
             {texts.irga.toolbar.offer}
           </button>
-          <Link
-            href={"/o_nas"}
-            className={
-              isSecondaryText()
-                ? "button-toolbar-white"
-                : "button-toolbar-black"
-            }
-          >
+          <Link href={"/o_nas"} className={getActiveClass(activeSection)}>
             {texts.irga.toolbar.about_us}
           </Link>
           <button
-            className={
-              isSecondaryText()
-                ? "button-toolbar-white"
-                : "button-toolbar-black"
-            }
+            className={getActiveClass(activeSection)}
             onClick={() => scrollToSection("footer")}
           >
             {texts.irga.toolbar.contact}
           </button>
-          <button
-            className={
-              isSecondaryText()
-                ? "button-toolbar-white"
-                : "button-toolbar-black"
-            }
+          <Link
+            className={getActiveClass(activeSection)}
+            href={"repertuar"}
             onClick={() => scrollToSection("events")}
           >
             {texts.irga.toolbar.rep}
-          </button>
+          </Link>
         </div>
         <div className="flex gap-4">
           <Link
             href={"https://www.instagram.com/irga.impro/reels/"}
-            className={
-              isSecondaryText()
-                ? "button-toolbar-white"
-                : "button-toolbar-black"
-            }
+            className={getActiveClass(activeSection)}
             target={"_blank"}
           >
             {texts.irga.toolbar.instagram}
@@ -103,11 +86,7 @@ export const TopToolbar = () => {
           <Link
             href={"https://www.facebook.com/irga.impro"}
             target={"_blank"}
-            className={
-              isSecondaryText()
-                ? "button-toolbar-white"
-                : "button-toolbar-black"
-            }
+            className={getActiveClass(activeSection)}
           >
             {texts.irga.toolbar.facebook}
           </Link>
@@ -115,7 +94,16 @@ export const TopToolbar = () => {
       </div>
       <div className="justify-end">
         <Link href="/">
-          <Image src={isSecondaryText() ? logoWhite : logo} alt={"logo"} />
+          <Image
+            src={
+              activeSection === "about_us" ||
+              activeSection === "offer" ||
+              activeSection === "rep"
+                ? logoWhite
+                : logo
+            }
+            alt={"logo"}
+          />
         </Link>
       </div>
     </div>
