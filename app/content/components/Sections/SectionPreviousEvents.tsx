@@ -5,10 +5,17 @@ import { VerticalEventsContainer } from "@/app/content/components/Sections/Verti
 export const SectionPreviousEvents = () => {
   return (
     <section
-      className={"h-[754px] bg-irga-light flex flex-row"}
+      className={
+        "bg-irga-sand flex flex-col py-24 border-irga-black border-b-[1px]"
+      }
       id="previous_events"
     >
-      <div className={"mx-20 my-40 flex flex-row"}>
+      <div>
+        <span className={"text-irga-dark text-xl font-libre pl-16"}>
+          minione wydarzenia
+        </span>
+      </div>
+      <div className={"mx-36 mt-20 flex flex-row"}>
         <VerticalEventsContainer />
         <VerticalEventsContainer />
         <VerticalEventsContainer />

@@ -23,8 +23,10 @@
       "workshops_content": "Kierujemy je do osób dorosłych, młodzieży i dzieci."
     },
     "footer": {
-      "website": "website by kata atak",
-      "photos": "photos by daniel-jakś",
+      "website": "website by",
+      "website_by": "kata atak",
+      "photos": "photos by",
+      "photos_by": "daniel-jakś",
       "rights": "@2024 irga",
       "header": "sociale i kontakt",
       "contact": {

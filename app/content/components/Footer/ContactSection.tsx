@@ -7,13 +7,20 @@ import texts from "../../texts.json";
 
 export const ContactSection = () => {
   return (
-    <section id={"footer"} className={"h-[575px] p-6 h-auto max-h-[575px]"}>
-      <div className={"mb-12"}>
+    <section
+      id={"footer"}
+      className={
+        "pl-6 h-auto max-h-[575px] gap-6 flex flex-col border-t-[1px] border-irga-black"
+      }
+    >
+      <div className={"mt-10"}>
         <span className={"w-full text-irga-dark text-5xl font-libre"}>
           sociale i kontakt
         </span>
-        <section className={"grid grid-cols-2"}>
-          <Image src={logo} alt={"logo"} />
+        <section className={"grid grid-cols-2 mt-24"}>
+          <div className={"flex justify-center items-start"}>
+            <Image src={logo} alt={"logo"} className={"scale-150"} />
+          </div>
           <div className={"grid grid-cols-3"}>
             <div className={"col-span-1 flex flex-col gap-4"}>
               <ContactTextItem
