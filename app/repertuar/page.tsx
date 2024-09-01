@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from "@/app/content/components/Layout";
 import { SectionEvents } from "@/app/content/components/Sections/SectionEvents";
 import Image from "next/image";
-import repertuar from "@/app/content/repertuar-bg-1.jpeg";
+import repertuar from "@/app/content/publika12.jpg";
 import { SectionSocialMedia } from "@/app/content/components/Sections/SectionSocialMedia";
 import { SectionPreviousEvents } from "@/app/content/components/Sections/SectionPreviousEvents";
 
