@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import team from "@/app/content/Kopia _44A9904-Poprawione-Szum-2.jpg";
-import { ButtonsGroup } from "@/app/content/components/ButtonsGroup";
+import team from "@/app/content/onas2.png";
 import Link from "next/link";
 import maziaj from "../../maziaj.svg";
 

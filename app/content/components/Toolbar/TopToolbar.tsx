@@ -1,74 +1,76 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { ReactEventHandler, useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../logo.svg";
-import logoWhite from "../../logo_white.svg";
 import Link from "next/link";
 import texts from "../../texts.json";
 
 export const TopToolbar = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element && element.scrollIntoView({ behavior: "smooth" });
   };
-  const [activeSection, setActiveSection] = useState<string | null>(null);
-  console.log("active", activeSection);
+
+  const handleScroll = () => {
+    if (window.scrollY > lastScrollY && window.scrollY > 50) {
+      // Scrolling down
+      setIsVisible(false);
+    } else {
+      // Scrolling up
+      setIsVisible(true);
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  const handleMouseMove = (e: MouseEvent) => {
+    if (e.clientY < 50) {
+      setIsVisible(true);
+    } else if (window.scrollY > 50) {
+      setIsVisible(false);
+    }
+  };
+
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const options = {
-      rootMargin: "0px 0px -95% 0px", // This ensures the intersection is detected when the top of the section hits the top of the viewport
-      threshold: 0,
-    };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.boundingClientRect.height > 600) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, options);
-    console.log("sections", sections);
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [handleScroll, lastScrollY]);
 
-  const getActiveClass = (activeSection: string | null) => {
-    return activeSection === "about_us" ||
-      activeSection === "offer" ||
-      activeSection === "rep" ||
-      activeSection === "social_mediaa"
-      ? "button-toolbar-white"
-      : "button-toolbar-black";
+  const getToolbarClass = () => {
+    return isVisible
+      ? "bg-irga-sand p-4 flex justify-between items-center sticky top-0 h-[80px] z-10 transform transition-transform duration-300 ease-in-out"
+      : "bg-irga-sand p-4 flex justify-between items-center sticky top-0 h-[80px] z-10 transform transition-transform duration-300 ease-in-out -translate-y-full";
   };
 
   return (
-    <div className="bg-transparent p-4 flex justify-between items-center sticky top-0 h-[80px] z-10">
+    <div className={getToolbarClass()}>
       <div className="flex justify-between space-x-4 p-2 w-1/2">
         <div className=" flex gap-4">
           <button
-            className={getActiveClass(activeSection)}
+            className={"button-toolbar-black"}
             onClick={() => scrollToSection("offer")}
           >
             {texts.irga.toolbar.offer}
           </button>
-          <Link href={"/o_nas"} className={getActiveClass(activeSection)}>
+          <Link href={"/o_nas"} className={"button-toolbar-black"}>
             {texts.irga.toolbar.about_us}
           </Link>
           <button
-            className={getActiveClass(activeSection)}
+            className={"button-toolbar-black"}
             onClick={() => scrollToSection("footer")}
           >
             {texts.irga.toolbar.contact}
           </button>
           <Link
-            className={getActiveClass(activeSection)}
+            className={"button-toolbar-black"}
             href={"repertuar"}
             onClick={() => scrollToSection("events")}
           >
@@ -78,7 +80,7 @@ export const TopToolbar = () => {
         <div className="flex gap-4">
           <Link
             href={"https://www.instagram.com/irga.impro/reels/"}
-            className={getActiveClass(activeSection)}
+            className={"button-toolbar-black"}
             target={"_blank"}
           >
             {texts.irga.toolbar.instagram}
@@ -86,7 +88,7 @@ export const TopToolbar = () => {
           <Link
             href={"https://www.facebook.com/irga.impro"}
             target={"_blank"}
-            className={getActiveClass(activeSection)}
+            className={"button-toolbar-black"}
           >
             {texts.irga.toolbar.facebook}
           </Link>
@@ -94,16 +96,7 @@ export const TopToolbar = () => {
       </div>
       <div className="justify-end">
         <Link href="/">
-          <Image
-            src={
-              activeSection === "about_us" ||
-              activeSection === "offer" ||
-              activeSection === "rep"
-                ? logoWhite
-                : logo
-            }
-            alt={"logo"}
-          />
+          <Image src={logo} alt={"logo"} />
         </Link>
       </div>
     </div>
