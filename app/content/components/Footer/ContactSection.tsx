@@ -10,16 +10,22 @@ export const ContactSection = () => {
     <section
       id={"footer"}
       className={
-        "pl-6 h-auto max-h-[575px] gap-6 flex flex-col border-t-[1px] border-irga-black"
+        "pl-6 h-auto max-h-[575px] w-full gap-6 flex flex-col border-t-[1px] border-irga-black"
       }
     >
-      <div className={"mt-10"}>
-        <span className={"w-full text-irga-dark text-5xl font-libre"}>
+      <div className={"mt-3 md:mt-10"}>
+        <span
+          className={"w-full text-irga-dark text-xl md:text-5xl font-libre"}
+        >
           sociale i kontakt
         </span>
-        <section className={"grid grid-cols-2 mt-24"}>
+        <section className={"grid grid-cols-1 md:grid-cols-2 mt-2 md:mt-24"}>
           <div className={"flex justify-center items-start"}>
-            <Image src={logo} alt={"logo"} className={"scale-150"} />
+            <Image
+              src={logo}
+              alt={"logo"}
+              className={"scale-125 md:scale-150 mb-2 md:mb-0"}
+            />
           </div>
           <div className={"grid grid-cols-3"}>
             <div className={"col-span-1 flex flex-col gap-4"}>

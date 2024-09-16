@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import team from "@/app/content/onas2.png";
+import team from "@/app/content/Frame 120.png";
 import Link from "next/link";
 import maziaj from "../../maziaj.svg";
 
