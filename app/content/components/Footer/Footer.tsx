@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <div
       className={
-        "h-4 w-full border-t-[1px] border-irga-black flex flex-row justify-end gap-6 md:gap-36 mt-10 p-2 md:p-8"
+        "h-4 w-full border-t-[1px] border-irga-black flex flex-row md:justify-end gap-6 md:gap-36 mt-10 p-2 md:p-8"
       }
     >
       <div className={"flex gap-2"}>

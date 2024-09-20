@@ -14,7 +14,7 @@ export const SectionSocialMedia = () => {
     >
       <div
         className={
-          "w-2/5 text-irga-light font-libre text-6xl p-6 flex flex-col mb-20 gap-6"
+          "md:w-2/5 text-irga-light font-libre text-lg md:text-6xl p-6 flex flex-col mb-20 gap-6"
         }
       >
         <span>chcesz być na bieżąco? zerknij na nasze sociale:</span>
@@ -23,7 +23,7 @@ export const SectionSocialMedia = () => {
             href={"https://goout.net/pl/profile/irga-impro/pptqc/events/"}
             target={"_blank"}
             className={
-              "bg-irga-sand w-auto text-irga-dark font-questrial px-8 py-2 text-2xl text-center"
+              "bg-irga-sand w-auto text-irga-dark font-questrial px-8 py-2 text-ml md:text-2xl text-center"
             }
           >
             {"facebook"}
@@ -31,20 +31,20 @@ export const SectionSocialMedia = () => {
           <Link
             href="/repertuar"
             className={
-              "bg-irga-sand w-auto text-irga-dark font-questrial px-8 py-2 text-2xl text-center"
+              "bg-irga-sand w-auto text-irga-dark font-questrial px-8 py-2 text-ml md:text-2xl text-center"
             }
           >
             {"insta"}
           </Link>
         </div>
       </div>
-      <div className={"w-3/5"}>
+      <div className={"md:w-3/5"}>
         <Image src={team} alt={"irga_social"} className={"h-auto"} />
       </div>
       <Image
         src={maziaj}
         alt={"maziaj"}
-        className={"absolute top-1 left-1/4"}
+        className={"absolute top-1 left-1/3 md:left-1/4 scale-50 md:scale-100"}
       />
     </section>
   );

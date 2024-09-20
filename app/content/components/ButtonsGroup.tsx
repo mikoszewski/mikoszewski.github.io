@@ -12,7 +12,7 @@ export const ButtonsGroup: React.FC<{
         target={"_blank"}
         id={"button-one"}
         className={
-          "bg-[#232323] text-irga-light font-custom px-2 py-2 text-3xl border-b-4 border-r-4 border-irga-button-border-green"
+          "bg-[#232323] text-irga-light font-custom px-2 py-2 text-sm md:text-3xl border-b-4 border-r-4 border-irga-button-border-green"
         }
       >
         {buttonOneName}
@@ -20,7 +20,7 @@ export const ButtonsGroup: React.FC<{
       <Link
         href="/repertuar"
         id={"button-two"}
-        className={"text-irga-dark font-custom px-2 py-2 text-3xl"}
+        className={"text-irga-dark font-custom px-2 py-2 text-sm md:text-3xl"}
       >
         {buttonTwoName}
       </Link>
