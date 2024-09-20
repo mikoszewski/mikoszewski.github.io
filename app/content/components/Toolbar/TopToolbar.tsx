@@ -69,7 +69,7 @@ export const TopToolbar = () => {
 
   return (
     <div className={getToolbarClass()}>
-      <div className="flex justify-between md:space-x-4 p-2 w-1/2">
+      <div className="flex justify-between md:space-x-4 p-2 md:w-1/2">
         <div className=" flex items-center md:gap-4">
           <button
             className={"button-toolbar-black  text-xs md:text-sm"}
@@ -79,7 +79,7 @@ export const TopToolbar = () => {
           </button>
           <Link
             href={"/o_nas"}
-            className={"button-toolbar-black  text-xs md:text-sm"}
+            className={"button-toolbar-black text-xs md:text-sm"}
           >
             {texts.irga.toolbar.about_us}
           </Link>
@@ -92,7 +92,6 @@ export const TopToolbar = () => {
           <Link
             className={"button-toolbar-black text-xs md:text-sm"}
             href={"/repertuar"}
-            // onClick={() => scrollToSection("events")}
           >
             {texts.irga.toolbar.rep}
           </Link>

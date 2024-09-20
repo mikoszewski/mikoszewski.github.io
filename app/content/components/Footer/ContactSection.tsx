@@ -15,7 +15,7 @@ export const ContactSection = () => {
     >
       <div className={"mt-3 md:mt-10"}>
         <span
-          className={"w-full text-irga-dark text-xl md:text-5xl font-libre"}
+          className={"w-full text-irga-dark text-ml md:text-5xl font-libre"}
         >
           sociale i kontakt
         </span>
@@ -24,7 +24,7 @@ export const ContactSection = () => {
             <Image
               src={logo}
               alt={"logo"}
-              className={"scale-125 md:scale-150 mb-2 md:mb-0"}
+              className={"scale-100 md:scale-150 mb-2 md:mb-0"}
             />
           </div>
           <div className={"grid grid-cols-3"}>

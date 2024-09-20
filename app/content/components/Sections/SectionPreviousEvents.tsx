@@ -6,16 +6,20 @@ export const SectionPreviousEvents = () => {
   return (
     <section
       className={
-        "bg-irga-sand flex flex-col py-24 border-irga-black border-b-[1px]"
+        "bg-irga-sand flex flex-col py-6 md:py-24 border-irga-black border-b-[1px]"
       }
       id="previous_events"
     >
       <div>
-        <span className={"text-irga-dark text-xl font-libre pl-16"}>
+        <span
+          className={
+            "text-irga-dark text-ml md:text-xl font-libre pl-6 md:pl-16"
+          }
+        >
           minione wydarzenia
         </span>
       </div>
-      <div className={"mx-36 mt-20 flex flex-row"}>
+      <div className={"md:mx-36 mt:6 md:mt-20 flex flex-col md:flex-row"}>
         <VerticalEventsContainer />
         <VerticalEventsContainer />
         <VerticalEventsContainer />

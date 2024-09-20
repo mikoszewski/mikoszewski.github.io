@@ -8,13 +8,17 @@ export const ContactTextItem: React.FC<{
   return (
     <section className={"flex flex-col"}>
       <span
-        className={"text-irga-text-light-grey text-base font-custom mb-1.5"}
+        className={
+          "text-irga-text-light-grey text-xs md:text-base font-custom mb-1.5"
+        }
       >
         {headerText}
       </span>
-      <span className={"text-irga-dark text-xl font-custom"}>{content}</span>
+      <span className={"text-irga-dark text-sm md:text-xl font-custom"}>
+        {content}
+      </span>
       {contentSecondary && (
-        <span className={"text-irga-dark text-xl font-custom"}>
+        <span className={"text-irga-dark text-sm md:text-xl font-custom"}>
           {contentSecondary}
         </span>
       )}
