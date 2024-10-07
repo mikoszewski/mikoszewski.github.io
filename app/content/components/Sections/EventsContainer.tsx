@@ -3,31 +3,50 @@ import Image from "next/image";
 import event from "@/app/content/58108217d3b01ac1e730dfa647233ea5.png";
 import { ButtonsGroup } from "@/app/content/components/ButtonsGroup";
 
-export const EventsContainer = () => {
+export const EventsContainer = (data: any) => {
+  console.log(data);
+  const truncateText = (text: string, length: number) => {
+    if (text.length > length) {
+      return text.substring(0, length) + "...";
+    }
+    return text;
+  };
+
+  const date = new Date(data.data.start_time);
+
+  const eventDate = new Intl.DateTimeFormat("pl-PL", {
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).format(date);
+
   return (
-    <section className={"flex flex-col md:flex-row gap-8"}>
+    <section className={"flex flex-col gap-8 md:flex-row"}>
       <Image
-        src={event}
+        src={data.data.cover.source}
         alt={"current-event"}
-        className={"h-auto md:h-[338px] w-full md:w-[646px]"}
+        className={"h-auto w-full md:h-[338px] md:w-[646px]"}
+        width={100}
+        height={100}
       />
       <section className={"flex flex-col gap-4"}>
         <span
-          className={"text-sm md:text-lg font-custom font-bold text-irga-dark"}
+          className={"font-custom text-sm font-bold text-irga-dark md:text-lg"}
         >
-          Pt, 10 maj o 20:00
+          {eventDate}
         </span>
         <span
           className={
-            "text-ml md:text-2xl font-urbanist leading-10 text-irga-dark"
+            "text-ml font-urbanist leading-10 text-irga-dark md:text-2xl"
           }
         >
-          irga: co robimy w ukryciu? || improwizowany spektakl komediowy
+          {data.data.name}
         </span>
-        <span className={"text-sm md:text-lg font-custom text-irga-dark"}>
-          Kasyno na uboczu, które lata świetności ma już dawno za sobą.
-          Zaglądasz ukradkiem do środka, a tam... Przy jednorękim bandycie
-          emerytka w krzykliwym kapeluszu...
+        <span className={"font-custom text-sm text-irga-dark md:text-lg"}>
+          {truncateText(data.data.description, 181)}
         </span>
         <ButtonsGroup
           buttonOneName={"kup bilet"}
