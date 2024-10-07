@@ -10,25 +10,23 @@ export const ContactSection = () => {
     <section
       id={"footer"}
       className={
-        "pl-6 h-auto max-h-[575px] w-full gap-6 flex flex-col border-t-[1px] border-irga-black"
+        "flex h-auto max-h-[575px] w-full flex-col gap-6 border-t-[1px] border-irga-black p-10"
       }
     >
       <div className={"mt-3 md:mt-10"}>
-        <span
-          className={"w-full text-irga-dark text-ml md:text-5xl font-libre"}
-        >
+        <span className={"w-full font-libre text-5xl text-irga-dark"}>
           sociale i kontakt
         </span>
-        <section className={"grid grid-cols-1 md:grid-cols-2 mt-2 md:mt-24"}>
-          <div className={"flex justify-center items-start"}>
-            <Image
-              src={logo}
-              alt={"logo"}
-              className={"scale-100 md:scale-150 mb-2 md:mb-0"}
-            />
+        <section className={"mt-2 grid grid-cols-1 md:mt-24 md:grid-cols-2"}>
+          <div
+            className={
+              "flex items-start justify-start py-10 md:justify-center md:p-0"
+            }
+          >
+            <Image src={logo} alt={"logo"} className={"scale-150 md:mb-0"} />
           </div>
-          <div className={"grid grid-cols-3"}>
-            <div className={"col-span-1 flex flex-col gap-4"}>
+          <div className={"grid space-y-4 md:grid-cols-3 md:space-y-0"}>
+            <div className={"flex gap-4 md:col-span-1 md:flex-col"}>
               <ContactTextItem
                 headerText={"instagram"}
                 content={"irga.impro"}
@@ -38,15 +36,12 @@ export const ContactSection = () => {
                 content={"irga.impro"}
               />
             </div>
-            <div className={"col-span-2 flex flex-col gap-4"}>
+            <div className={"flex gap-4 md:col-span-2 md:flex-col"}>
               <ContactTextItem
-                headerText={"teatr improwizacji"}
+                headerText={
+                  "teatr improwizacji – eventy, spektakle na zamówienie, organizacja szkoleń i warsztatów"
+                }
                 content={"irga.impro@gmail.com"}
-              />
-              <ContactTextItem
-                headerText={texts.irga.footer.contact.person_header}
-                content={texts.irga.footer.contact.person_one}
-                contentSecondary={texts.irga.footer.contact.person_two}
               />
             </div>
           </div>
